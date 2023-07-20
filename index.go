@@ -4,6 +4,7 @@ import (
     "fmt"
     "net/http"
     "os"
+    "exec"
 )
 
 func main() {
@@ -23,6 +24,7 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
     // 2 Run as ssh using user and host
 
     cmd := exec.Command("./deploy", sshUser, sshHost)
+    
     // 3 Process Error
     
     _, err := cmd.StdoutPipe()
@@ -40,6 +42,8 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
         fmt.Fprintln(os.Stderr, "Error waiting for cmd", err)
         return
     }
-    // 4 Return 200 is success
+    // 4 Return 200 is success best
+
+
     writer.WriteHeader(200)
 }
