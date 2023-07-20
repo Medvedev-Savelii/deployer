@@ -12,5 +12,4 @@ if [ -n "$2" ]; then
     SSH_HOST="$2"
 fi
 
-ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
-    $SSH_USER@$SSH_HOST "cd /home/admin/time-app && docker-compose pull && docker-compose up -d"
+ssh -i ~/.ssh/id_rsa $SSH_USER@$SSH_HOST "cd /home/admin/time-app && docker-compose pull && docker-compose up -d"
