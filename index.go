@@ -36,7 +36,7 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
         return
     }
 
-    err := cmd.Wait()
+    err = cmd.Wait()
 
     if err != nil {
         fmt.Fprintln(os.Stderr, "Error waiting for cmd", err)
