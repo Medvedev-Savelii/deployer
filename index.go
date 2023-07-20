@@ -36,12 +36,10 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 
     err := cmd.Wait()
 
-    f err != nil {
+    if err != nil {
         fmt.Fprintln(os.Stderr, "Error waiting for cmd", err)
         return
     }
-
     // 4 Return 200 is success
-
     writer.WriteHeader(200)
 }
