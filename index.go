@@ -32,14 +32,14 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
     err = cmd.Start()
 
     if err != nil {
-        fmt.Fprintln(os.Stderr, "Error starting cmd", err)
+        fmt.Fprintln(os.Stderr, "Error starting cmd ne kurwa", err)
         return
     }
 
     err = cmd.Wait()
 
     if err != nil {
-        fmt.Fprintln(os.Stderr, "Error waiting for cmd", err)
+        fmt.Fprintln(os.Stderr, "Error waiting for cmd kurwa blat", err)
         return
     }
     // 4 Return 200 is success best
