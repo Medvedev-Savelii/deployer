@@ -4,7 +4,7 @@ WORKDIR /app
 
 ADD index.go .
 
-RUN go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o start *.go
+RUN go build -a -tags netgo -o start *.go
 
 FROM alpine:3.16
 

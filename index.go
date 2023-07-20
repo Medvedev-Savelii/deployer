@@ -4,7 +4,7 @@ import (
     "fmt"
     "net/http"
     "os"
-    "exec"
+    "os/exec"
 )
 
 func main() {
