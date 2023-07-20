@@ -13,4 +13,4 @@ if [ -n "$2" ]; then
 fi
 
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
-    $SSH_USER@$SSH_HOST "cd /inf && docker-compose pull && docker-compose up"
+    $SSH_USER@$SSH_HOST "cd time-app/ && docker-compose pull && docker-compose up"

@@ -20,4 +20,4 @@ COPY ./deploy /app/deploy
 
 RUN chmod +x ./deploy && chmod 400 ~/.ssh/id_rsa
 
-CMD [ "app/start" ]
+CMD [ "/app/start" ]
