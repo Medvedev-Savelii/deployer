@@ -2,7 +2,7 @@ FROM golang:latest AS build
 
 WORKDIR /app
 
-ADD index.go .
+ADD index.go ./
 
 RUN go build -a -tags netgo -o start *.go
 

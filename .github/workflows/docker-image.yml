@@ -21,7 +21,7 @@ jobs:
           
       - name: Add private key
         env:
-          ID_RSA: ${{secrets.ID_RSA}}
+          ID_RSA: ${{ secrets.ID_RSA }}
         run: mkdir .ssh && touch .ssh/id_rsa && printf -- "$ID_RSA" > .ssh/id_rsa
     
       - name: Build the Docker image
