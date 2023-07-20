@@ -25,6 +25,7 @@ func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 
     cmd := exec.Command("./deploy", sshUser, sshHost)
     
+    
     // 3 Process Error
     
     _, err := cmd.StdoutPipe()

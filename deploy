@@ -3,13 +3,13 @@
 SSH_USER="admin"
 SSH_HOST="158.160.48.1"
 
-if [ -n "$1" ]; then
-    SSH_USER="$1"
-fi
+# if [ -n "$1" ]; then
+#     SSH_USER="$1"
+# fi
 
 
-if [ -n "$2" ]; then
-    SSH_HOST="$2"
-fi
+# if [ -n "$2" ]; then
+#     SSH_HOST="$2"
+# fi
 
 ssh -i ~/.ssh/id_rsa $SSH_USER@$SSH_HOST "cd /home/admin/time-app && docker-compose pull && docker-compose up -d"
