@@ -4,9 +4,9 @@ WORKDIR /app
 
 ADD index.go .
 
-RUN GOARCH=amd64 go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o start *.go
+RUN go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o start *.go
 
-FROM apline:3.16
+FROM alpine:3.16
 
 WORKDIR /app
 
