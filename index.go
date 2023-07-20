@@ -17,8 +17,7 @@ func main() {
 type hwHandler struct{}
 
 func (hwHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
-    // 1 Get User and Port From enviroments vars
-
+    // 1 Get User and Port From enviroments varss
     sshUser := os.Getenv("SSH_USER")
     sshHost := os.Getenv("SSH_HOST")
     // 2 Run as ssh using user and host
