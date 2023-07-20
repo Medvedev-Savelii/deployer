@@ -19,10 +19,10 @@ jobs:
           username: json_key
           password: ${{ secrets.YCR_TOKEN }}
           
-      - name: Add private key
-        env:
-          ID_RSA: ${{ secrets.ID_RSA }}
-        run: mkdir .ssh && touch .ssh/id_rsa && printf -- "$ID_RSA" > .ssh/id_rsa
+      # - name: Add private key
+      #   env:
+      #     ID_RSA: ${{ secrets.ID_RSA }}
+      #   run: mkdir .ssh && touch .ssh/id_rsa && printf -- "$ID_RSA" > .ssh/id_rsa
     
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag cr.yandex/crp4j94ui2o0mg26i9v8/deployer:latest
